@@ -23,9 +23,17 @@ def main():
 
  # Rwquest for input fatures, but replod with some default values
 order_id= st.number_input('order_id', 1.0)
+
 location_id= st.number_input('location_id', 1.0)
+
+
 total= st.number_input('total', 1.0)
+
+st.selectbox('status', ['Pending=0', 'Completed=1', 'Cancelled=2'])
+
 status_class= st.number_input('status_class', 1.0)
+
+
 customer_id= st.number_input('customer_id', 1.0)
 
 
