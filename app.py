@@ -32,7 +32,7 @@ customer_id= st.number_input('customer_id', 1.0)
 
 
 if st.button("Predict"):
-    pickle_in = open('model.pkl', 'rb')
+    pickle_in = open('app_order/model.pkl', 'rb')
     model = pickle.load(pickle_in)
     predict=model.predict([[order_id,location_id,total,status_class,customer_id]])
   
