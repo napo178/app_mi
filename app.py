@@ -31,7 +31,7 @@ total= st.number_input('total', 1.0)
 
 st.selectbox('status', ['Pending=0', 'Completed=1', 'Cancelled=2'])
 
-status_class= st.number_input('status_class', 1.0)
+status_class= st.number_input('status_class', 0)
 
 
 customer_id= st.number_input('customer_id', 1.0)
