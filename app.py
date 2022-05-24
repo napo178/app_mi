@@ -8,7 +8,17 @@ st.title('Real Time order prediction')
 
 from PIL import Image
 image = Image.open('crmb.png')
+
+
+from PIL import Image
+image = Image.open('timeline.png')
+
+
+
+
 st.image(image, caption='crmb')
+
+
 st.write('This app predicts the order time  based on the location amd the status based on the historical data')
 
 
