@@ -7,7 +7,7 @@ import numpy as np
 st.title('Real Time order prediction')
 
 from PIL import Image
-image = Image.open('/Users/napoleonperez/Desktop/crmb/streamlit_order_app/crmb.png')
+image = Image.open('crmb.png')
 st.image(image, caption='crmb')
 st.write('This app predicts the order time  based on the location amd the status based on the historical data')
 
@@ -15,7 +15,7 @@ st.write('This app predicts the order time  based on the location amd the status
 
 
 # Load the model
-model = pickle.load(open('/Users/napoleonperez/Desktop/crmb/streamlit_order_app/model.pkl','rb'))
+model = pickle.load(open('model.pkl','rb'))
 
 def main():
 
@@ -34,7 +34,7 @@ customer_id= st.number_input('customer_id', 1.0)
 
 
 if st.button("Predict"):
-    pickle_in = open('/Users/napoleonperez/Desktop/crmb/streamlit_order_app/model.pkl', 'rb')
+    pickle_in = open('model.pkl', 'rb')
     model = pickle.load(pickle_in)
     predict=model.predict([[order_id,location_id,total,status_class,customer_id]])
   
