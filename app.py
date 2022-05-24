@@ -14,8 +14,6 @@ st.write('This app predicts the order time  based on the location amd the status
 
 
 
-# Load the model
-model = pickle.load(open('model.pkl','rb'))
 
 def main():
 
