@@ -11,14 +11,17 @@ st.image(image, caption='crmb')
 
 
 
-st.title('The app uses the real time inputs to predict ( Order_id,Location_id,total,status and customer_id)')
+
+
+st.title('The app uses the real time inputs to predict the final order time')
+
+
 
 from PIL import Image
 image = Image.open('timeline.png')
 st.image(image, caption='Problem')
 
-# Title of the app page
-st.title('Order time prediction App')
+
 
 # Add a heading for input features
 st.subheader('Enter  Features for Predictions')
