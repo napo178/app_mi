@@ -5,21 +5,17 @@ import pickle
 import numpy as np
 
 st.title('Real Time order prediction')
-
-from PIL import Image
-image = Image.open('timeline.png')
-st.image(image, caption='Problem')
-
-
-st.write('This app predicts the order time  based on the location amd the status based on the historical data')
-
-
-st.write('The app uses the real time inputs to predict ( Order_id,Location_id,total,status and customer_id)')
-
 from PIL import Image
 image = Image.open('crmb.png')
 st.image(image, caption='crmb')
 
+
+
+st.title('The app uses the real time inputs to predict ( Order_id,Location_id,total,status and customer_id)')
+
+from PIL import Image
+image = Image.open('timeline.png')
+st.image(image, caption='Problem')
 
 # Title of the app page
 st.title('Order time prediction App')
