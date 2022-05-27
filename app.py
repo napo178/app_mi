@@ -8,20 +8,18 @@ st.title('Real Time order prediction')
 
 from PIL import Image
 image = Image.open('timeline.png')
-
-
-
-
-
-
-
-st.image(image, caption='crmb')
+st.image(image, caption='Problem')
 
 
 st.write('This app predicts the order time  based on the location amd the status based on the historical data')
 
 
-st.write('The app uses the real time inputs to predict ( Order_id,Location_id,total,status and customer_id')
+st.write('The app uses the real time inputs to predict ( Order_id,Location_id,total,status and customer_id)')
+
+from PIL import Image
+image = Image.open('crmb.png')
+st.image(image, caption='crmb')
+
 
 # Title of the app page
 st.title('Order time prediction App')
@@ -30,32 +28,32 @@ st.title('Order time prediction App')
 st.subheader('Enter  Features for Predictions')
 
  # Rwquest for input fatures, but replod with some default values
-order_id= st.number_input('order_id', 1.0)
+Order_id= st.number_input('order_id', 1.0)
 
-st.write(' Your order_id', order_id)
+st.write(' Your order_id', Order_id)
 
-location_id= st.number_input('location_id', 1.0)
+Location_id= st.number_input('location_id', 1.0)
 
-st.write('Your location_id is', location_id)
+st.write('Your location_id is', Location_id)
 
-total= st.number_input('total', 1.0)
+Total= st.number_input('total', 1.0)
 
-st.write('Your total is', total)
+st.write('Your total is', Total)
 
 order_status_class= st.selectbox('order_status_class', ['READY=5', 'PREPARING=4', 'PAYMENT_PENDING=4', 'PENDING=2', 'OPEN=1'])
 
 
-status_class= st.number_input('status_class', 1.0)
+Status_class= st.number_input('status_class', 1.0)
 
 
-st.write('Your status_class is', status_class)
+st.write('Your status_class is', Status_class)
 
 
 st.write('The model made a prediction for each customer`')
 
-customer_id= st.number_input('customer_id', 1.0)
+Customer_id= st.number_input('customer_id', 1.0)
 
-st.write('Your customer_id is', customer_id)
+st.write('Your customer_id is', Customer_id)
 
 # Load  the model from disk
 
@@ -63,7 +61,7 @@ st.write('Your customer_id is', customer_id)
 if st.button("Predict"):
     pickle_in = open('model.pkl', 'rb')
     model = pickle.load(pickle_in)
-    predict=model.predict([[order_id,location_id,total,status_class,customer_id]])
+    predict=model.predict([[Order_id,Location_id,Total,Status_class,Customer_id]])
   
 
     st.text(f"""
