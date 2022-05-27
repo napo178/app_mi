@@ -50,7 +50,7 @@ st.write('The status_class is', Status_class)
 
 
 
-st.write('The model made a prediction for each customer')
+st.write('(The model made a prediction for each customer)')
 
 
 
