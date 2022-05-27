@@ -7,7 +7,7 @@ import numpy as np
 st.title('Real Time order prediction')
 
 from PIL import Image
-image = Image.open('/Users/napoleonperez/Desktop/crmb/streamlit_order_app/crmb.png')
+image = Image.open('crmb.png')
 st.image(image, caption='crmb')
 st.write('This app predicts the order time  based on the orders information in real time')
 
@@ -54,7 +54,7 @@ st.write('Your customer_id is', customer_id)
 
 
 if st.button("Predict"):
-    pickle_in = open('/Users/napoleonperez/Desktop/crmb/streamlit_order_app/model.pkl', 'rb')
+    pickle_in = open('model.pkl', 'rb')
     model = pickle.load(pickle_in)
     predict=model.predict([[order_id,location_id,total,status_class,customer_id]])
   
@@ -68,7 +68,7 @@ if st.button("Predict"):
 
 
 import pandas as pd
-df=pd.read_csv('/Users/napoleonperez/Desktop/crmb/streamlit_order_app/train.csv')
+df=pd.read_csv('train.csv')
 import plotly.express as px
 fig=px.scatter(df,x='order_seconds',y='action_at',color='status_class')
 fig.show()
