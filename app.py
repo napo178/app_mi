@@ -17,7 +17,6 @@ image = Image.open('timeline.png')
 
 
 st.image(image, caption='crmb')
-<<<<<<< HEAD
 
 
 st.write('This app predicts the order time  based on the location amd the status based on the historical data')
@@ -25,8 +24,6 @@ st.write('This app predicts the order time  based on the location amd the status
 st.write('This app predicts the order time  based on the orders information in real time')
 
 
-# Title of the app page
->>>>>>> b5ab642b270378c63e753d4e65b928e930aa67d0
 
 
 
