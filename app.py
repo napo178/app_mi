@@ -20,7 +20,7 @@ st.image(image, caption='crmb')
 
 
 st.write('This app predicts the order time  based on the location amd the status based on the historical data')
-=======
+
 st.write('This app predicts the order time  based on the orders information in real time')
 
 
