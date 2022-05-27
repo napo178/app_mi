@@ -7,7 +7,7 @@ import numpy as np
 st.title('Real Time order prediction')
 
 from PIL import Image
-image = Image.open('crmb.png')
+image = Image.open('train.png')
 
 
 
