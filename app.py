@@ -10,8 +10,7 @@ from PIL import Image
 image = Image.open('crmb.png')
 
 
-from PIL import Image
-image = Image.open('timeline.png')
+
 
 
 
@@ -75,7 +74,8 @@ if st.button("Predict"):
     """)    # Get the input features
     # run predictions
 
-
+from PIL import Image
+image = Image.open('timeline.png')
 
 
 
