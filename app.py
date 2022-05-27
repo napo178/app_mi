@@ -67,15 +67,4 @@ if st.button("Predict"):
 
 
 
-import pandas as pd
-df=pd.read_csv('train.csv')
-import plotly.express as px
-fig=px.scatter(df,x='order_seconds',y='action_at',color='status_class')
-fig.show()
 
-st.plotly_chart(fig, use_container_width=True)
-
-
-fig=px.scatter(df,x='order_seconds',y='updated_at',color='status_class')
-fig.show()
-st.plotly_chart(fig, use_container_width=True)
