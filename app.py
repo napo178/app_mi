@@ -6,20 +6,17 @@ import numpy as np
 
 st.title('Real Time order prediction')
 from PIL import Image
-image = Image.open('crmb.png')
-st.image(image, caption='crmb')
+image = Image.open('int.png')
+st.image(image, caption='Multiple Intelligence')
 
 
 
 
 
-st.title('The app uses the real time inputs to predict the final order time')
+st.title('The app uses the real time inputs to predict the final score in the Gardners Multiple Intelligence test')
 
 
 
-from PIL import Image
-image = Image.open('timeline.png')
-st.image(image, caption='Problem')
 
 
 
