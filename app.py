@@ -27,33 +27,32 @@ st.image(image, caption='Problem')
 st.subheader('Enter  Features for Predictions')
 
  # Rwquest for input fatures, but replod with some default values
-Order_id= st.number_input('order_id', 1.0)
+a_order= st.number_input('a_order', 1.0)
 
-st.write(' The order_id:', Order_id)
+st.write(' The a_order is:', a_order)
 
-Location_id= st.number_input('location_id', 1.0)
+a_value= st.number_input('a_value', 1.0)
 
-st.write('The location_id is:', Location_id)
+st.write('The a_value is:', a_value)
 
-Total= st.number_input('total', 1.0)
+question_id= st.number_input('total', 1.0)
 
-st.write('The total is:', Total)
+st.write('The question_id is:',question_id)
 
-order_status_class= st.selectbox('order_status_class', ['READY=5', 'PREPARING=4', 'PAYMENT_PENDING=4', 'PENDING=2', 'OPEN=1'])
-
-
-Status_class= st.number_input('status_class', 1.0)
+order_status_class= st.selectbox('text_category', ['Mostly Disagree=1', 'Slightly Disagree=2', 'Slightly Agree=3', 'Mostly Agree=4'])
 
 
-st.write('The status_class is', Status_class)
+text_category= st.number_input('status_class', 1.0)
+
+st.write('The status_class is', text_category)
 
 
+id= st.number_input('id', 1.0)
+
+st.write('the id is', id)
 
 
-
-
-
-st.write('(The model made a prediction for each customer)')
+st.write('(The model made a prediction for each people in the survey)')
 
 
 
@@ -67,13 +66,13 @@ st.write('Your customer_id is', Customer_id)
 
 
 if st.button("Predict"):
-    pickle_in = open('model.pkl', 'rb')
+    pickle_in = open('forest.pkl', 'rb')
     model = pickle.load(pickle_in)
-    predict=model.predict([[Order_id,Location_id,Total,Status_class,Customer_id]])
+    predict=model.predict([['a_order','a_value','question_id','text_category','id']])
   
 
     st.text(f"""
-     The predicted order_time in seconds is :  {predict[0]} 
+     The predicted intelligence multiple  is :  {predict[0]} 
     """)    # Get the input features
     # run predictions
 
