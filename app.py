@@ -3,6 +3,7 @@ import streamlit as st
 import pandas as pd
 import pickle
 import numpy as np
+import xgboost as xgb
 
 st.title('Real Time order prediction')
 from PIL import Image
