@@ -55,10 +55,6 @@ st.write('(The model made a prediction for each people in the survey)')
 
 
 
-Customer_id= st.number_input('customer_id', 1.0)
-
-st.write('Your customer_id is', Customer_id)
-
 # Load  the model from disk
 
 
