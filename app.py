@@ -60,7 +60,7 @@ st.write('(The model made a prediction for each people in the survey)')
 
 
 if st.button("Predict"):
-    pickle_in = open('forest.pkl', 'rb')
+    pickle_in = open('model.pkl', 'rb')
     model = pickle.load(pickle_in)
     predict=model.predict([['a_order','a_value','question_id','text_category','id']])
   
