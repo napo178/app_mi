@@ -3,7 +3,7 @@ import streamlit as st
 import pandas as pd
 import pickle
 import numpy as np
-
+from sklearn import linear_model
 
 st.title('Real Time order prediction')
 from PIL import Image
