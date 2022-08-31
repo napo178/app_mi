@@ -10,16 +10,7 @@ from PIL import Image
 image = Image.open('int.png')
 st.image(image, caption='Multiple Intelligence')
 
-
-
-
-
 st.title('The app uses the real time inputs to predict the final score in the Gardners Multiple Intelligence test')
-
-
-
-
-
 
 # Add a heading for input features
 st.subheader('Enter  Features for Predictions')
@@ -62,7 +53,7 @@ st.write('(The model made a prediction for each people in the survey)')
 if st.button("Predict"):
     pickle_in = open('model.pkl', 'rb')
     model = pickle.load(pickle_in)
-    predict=model.predict([['a_order','a_value','question_id','text_category','id']])
+    predict=model.predict(['a_order','a_value','question_id','text_category','id'])
   
 
     st.text(f"""
