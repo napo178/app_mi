@@ -12,6 +12,9 @@ st.image(image, caption='Multiple Intelligence')
 
 st.title('The app uses the real time inputs to predict the final score in the Gardners Multiple Intelligence test')
 
+
+
+
 # Add a heading for input features
 st.subheader('Enter  Features for Predictions')
 
@@ -24,11 +27,12 @@ a_value= st.number_input('a_value', 1.0)
 
 st.write('The a_value is:', a_value)
 
-question_id= st.number_input('total', 1.0)
+question_id= st.number_input('question_id', 1.0)
 
 st.write('The question_id is:',question_id)
 
-order_status_class= st.selectbox('text_category', ['Mostly Disagree=1', 'Slightly Disagree=2', 'Slightly Agree=3', 'Mostly Agree=4'])
+
+text_category= st.selectbox('text_category', ['Mostly Disagree=1', 'Slightly Disagree=2', 'Slightly Agree=3', 'Mostly Agree=4'])
 
 
 text_category= st.number_input('status_class', 1.0)
@@ -41,7 +45,9 @@ id= st.number_input('id', 1.0)
 st.write('the id is', id)
 
 
-st.write('(The model made a prediction for each people in the survey)')
+
+
+st.write('(The model made a prediction for multiple intelligence for each people in the survey')
 
 
 
